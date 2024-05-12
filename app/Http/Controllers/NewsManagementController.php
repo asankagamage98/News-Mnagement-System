@@ -11,6 +11,9 @@ class NewsManagementController extends Controller
     public function index(){
         return view('pages.home.index');
     }
+    public function createNewsPage(){
+        return view('pages.news.createNews');
+    }
    //create a news
    public function createNews(Request $request){
         $data = $requesr->validate([
