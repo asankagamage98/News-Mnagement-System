@@ -8,7 +8,10 @@
     @include('libaries.styles')
 </head>
 <body>
+
+@include('components.navbar')
 @yield('content')
-@include('libries.scripts')
+@include('components.footer')
+@include('libaries.scripts')
 </body>
 </html>

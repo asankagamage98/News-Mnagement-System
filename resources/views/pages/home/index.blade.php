@@ -1,15 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>My News</title>
-    @include('name')
-</head>
-<body>
-<h1>
-    i am asanka
-</h1>
-</body>
-</html>
+@extends('layouts.app')
+
+@section('content')
+   <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                    <h2 class="page-title">Home Page</h2>
+            </div>
+        </div>
+   </div>
+@endsection
+
+
+@push('css')
+<style>
+    .page-title{
+        padding-top:10vh;
+        font-size:2rem;
+        color:red;
+    }
+</style>
+@endpush
