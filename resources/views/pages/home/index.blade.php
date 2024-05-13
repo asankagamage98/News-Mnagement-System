@@ -4,7 +4,12 @@
    <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
-                    <h2 class="page-title">Home Page</h2>
+                <h1>List of news</h1>
+            </div>
+            <div class="col-lg-12 text-center">
+                @foreach ($response as $key => $res)
+                         @include('components.cards.newsCard',['res' => $res])
+                @endforeach
             </div>
         </div>
    </div>

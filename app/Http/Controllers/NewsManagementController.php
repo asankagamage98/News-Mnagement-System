@@ -9,7 +9,9 @@ class NewsManagementController extends Controller
 
 
     public function index(){
-        return view('pages.home.index');
+        $response = Newsmgt::all();
+        //dd($response);
+        return view('pages.home.index')->with('response', $response);
     }
     public function NewsPage(){
         return view('pages.news.createNews');
@@ -28,7 +30,7 @@ class NewsManagementController extends Controller
         $saveData = Newsmgt::create($data)->all();
         //dd($saveData);
         //return response()->json(['message' => 'News published successfully'], 200);
-        return redirect()->back();
+        return redirect()->route('home');
    }
 
 
