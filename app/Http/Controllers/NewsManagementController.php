@@ -11,12 +11,13 @@ class NewsManagementController extends Controller
     public function index(){
         return view('pages.home.index');
     }
-    public function createNewsPage(){
+    public function NewsPage(){
         return view('pages.news.createNews');
     }
    //create a news
    public function createNews(Request $request){
-        $data = $requesr->validate([
+   // dd($request);
+        $data = $request->validate([
             'title'=>'string|required',
             'content'=>'string|required',
             'autherName'=>'string|required',
@@ -24,7 +25,10 @@ class NewsManagementController extends Controller
             'newsType'=>'string|required'
         ]);
 
-        $saveData = Newsmgt::create($data->all());
+        $saveData = Newsmgt::create($data)->all();
+        //dd($saveData);
+        //return response()->json(['message' => 'News published successfully'], 200);
+        return redirect()->back();
    }
 
 

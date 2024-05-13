@@ -11,5 +11,6 @@ Route::get('/',[NewsManagementController::class,'index'])->name('home');
 
 //news
 Route::prefix('/news')->group(function(){
-    Route::get('/createNews',[NewsManagementController::class, 'createNewsPage'])->name('newscreate');
+    Route::get('/',[NewsManagementController::class, 'NewsPage'])->name('news');
+    Route::post('/createNews',[NewsManagementController::class, 'createNews'])->name('news.create');
 });

@@ -17,7 +17,7 @@
               News Manage
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="{{ route('newscreate') }}">Publish News</a></li>
+              <li><a class="dropdown-item" href="{{ route('news') }}">Publish News</a></li>
               <li><a class="dropdown-item" href="#">Another action</a></li>
             </ul>
           </li>
