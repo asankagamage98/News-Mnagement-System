@@ -16,6 +16,22 @@ class NewsManagementController extends Controller
     public function NewsPage(){
         return view('pages.news.createNews');
     }
+    public function UpdatePage(){
+        return view('pages.news.editNews');
+    }
+    public function NewsViewPage(String $id) {
+        $response = Newsmgt::find($id);
+        //dd($response);
+        if (!$response) {
+            // Handle the case where the news item is not found
+            return redirect()->route('news.index')->with('error', 'News item not found.');
+        }
+        return view('pages.news.singleNews')->with('response', $response);
+    }
+
+
+
+
    //create a news
    public function createNews(Request $request){
    // dd($request);
