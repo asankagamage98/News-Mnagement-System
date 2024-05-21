@@ -1,4 +1,4 @@
-<div class="card row mb-3">
+<div class="card row mb-3 m-2">
     <div class="col-lg-12">
         <div class="row d-flex ">
             <h3 class="text-secondary">{{ $res['title'] }}</h3>

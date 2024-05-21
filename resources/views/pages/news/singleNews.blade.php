@@ -10,8 +10,8 @@
             </div>
             <hr></hr>
             <div class="col-lg-12 gap-3 pb-3 pt-3">
-                <i class="fa-regular fa-trash-can fa-xl" style="color: #616161;" onmouseover="this.style.color='#FF0000'" onmouseout="this.style.color='#616161'"></i>
-                <i class="fa-solid fa-pen-to-square fa-xl ms-2" style="color: #616161;" onmouseover="this.style.color='#00FF00'" onmouseout="this.style.color='#616161'"></i>
+               <a href=""><i class="fa-regular fa-trash-can fa-xl" style="color: #616161;" onmouseover="this.style.color='#FF0000'" onmouseout="this.style.color='#616161'"></i></a>
+               <a href="{{ route('news.editNews',$response['id']) }}"><i class="fa-solid fa-pen-to-square fa-xl ms-2" style="color: #616161;" onmouseover="this.style.color='#00FF00'" onmouseout="this.style.color='#616161'"></i></a>
 
             </div>
             <hr></hr>

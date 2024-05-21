@@ -16,8 +16,14 @@ class NewsManagementController extends Controller
     public function NewsPage(){
         return view('pages.news.createNews');
     }
-    public function UpdatePage(){
-        return view('pages.news.editNews');
+    public function UpdatePage(String $id){
+        $response = Newsmgt::find($id);
+        //dd($response);
+        if (!$response) {
+            // Handle the case where the news item is not found
+            return redirect()->route('news.index')->with('error', 'News item not found.');
+        }
+        return view('pages.news.editNews')->with('response', $response);
     }
     public function NewsViewPage(String $id) {
         $response = Newsmgt::find($id);
@@ -64,7 +70,8 @@ class NewsManagementController extends Controller
    public function updateNews(Request $request , String $id){
         $findData = Newsmgt::find($id);
         $findData->update($request->all());
-        return $findData;
+       // return $findData;
+        return redirect()->route('home');
    }
 
    //delete news
