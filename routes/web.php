@@ -20,4 +20,5 @@ Route::prefix('/news')->group(function(){
     Route::post('/createNews',[NewsManagementController::class, 'createNews'])->name('news.create');
     Route::get('/getnewsbyid',[NewsManagementController::class, 'getByID'])->name('news.getNewsByID');
     Route::put('/editNews/{id}',[NewsManagementController::class, 'updateNews'])->name('news.update');
+    Route::delete('/delete/{id}',[NewsManagementController::class,'deleteNews'])->name('news.delete');
 });

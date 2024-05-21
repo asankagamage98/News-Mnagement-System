@@ -77,6 +77,6 @@ class NewsManagementController extends Controller
    //delete news
    public function deleteNews(Request $request , String $id){
         Newsmgt::destroy($id);
-
+        return redirect()->route('home');
    }
 }
